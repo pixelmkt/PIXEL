@@ -11,52 +11,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
     <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="headline text-2xl text-[var(--rojo-acento)]">PIXEL</a>
+            <a href="index.html">
+                <!-- TU LOGO AQUÍ: Reemplaza el src. Ajusta la altura (h-8) si es necesario. -->
+                <img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8">
+            </a>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--gris-oscuro)]">
-                <a href="servicios.html" class="nav-link transition-colors">Servicios</a><a href="proyectos.html" class="nav-link transition-colors">Proyectos</a><a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold text-[var(--naranja)]">Suite IA</a><a href="https://pixel-web-lyart.vercel.app/" target="_blank" class="nav-link transition-colors font-bold text-[var(--naranja)]">Studio Pixel</a><a href="contacto.html" class="nav-link transition-colors">Contacto</a>
+                <a href="proyectos.html" class="nav-link transition-colors">Proyectos</a>
+                <a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">Posicionamiento en IA</a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">¿Qué hacemos?</a>
+                <a href="contacto.html" class="nav-link transition-colors">Contacto</a>
             </nav>
             <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--gris-oscuro)]"><i class="fas fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-fondo-crema/95 border-t border-[var(--linea-clara)]">
-            <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Inicio</a><a href="servicios.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Servicios</a><a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Proyectos</a><a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
+            <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Inicio</a>
+            <a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Proyectos</a>
+            <a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4">
-        <section class="text-center py-24 md:py-32">
-            <h1 class="headline text-5xl md:text-7xl scroll-reveal">Estrategia Digital <br> con Elegancia <span class="text-highlight">Tecnológica.</span></h1>
-            <p class="text-lg md:text-xl mt-8 max-w-3xl mx-auto scroll-reveal" style="transition-delay: 100ms;">Somos la agencia que fusiona la precisión de la IA y el performance del Paid Media con la visión estratégica que tu marca necesita para liderar.</p>
-            <div class="mt-12 scroll-reveal" style="transition-delay: 200ms;"><a href="servicios.html" class="btn text-lg">Descubrir Capacidades</a></div>
+    <main class="max-w-5xl mx-auto px-4">
+        <section class="text-left py-24 md:py-32">
+            <h1 class="headline text-5xl md:text-6xl scroll-reveal">Transformamos <span class="text-highlight">Datos</span><br>en <span class="text-highlight">Dominio</span> Digital.</h1>
+            <p class="text-lg md:text-xl mt-8 max-w-2xl scroll-reveal" style="transition-delay: 100ms;">Somos la agencia de estrategia y tecnología que decodifica el futuro. Fusionamos IA, Paid Media y desarrollo a medida para crear soluciones que no solo compiten, sino que lideran.</p>
+            <div class="mt-12 scroll-reveal" style="transition-delay: 200ms;"><a href="https://cotizacion-xi.vercel.app/" target="_blank" class="btn text-lg">Explorar Servicios</a></div>
         </section>
 
-        <section class="py-24">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="headline text-4xl">Capacidades Clave</h2>
-                <p class="text-lg text-[var(--muted)] mt-4">Nuestro arsenal para tu dominio digital.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="servicios.html#posicionamiento-ia" class="card p-8 scroll-reveal block"><h3 class="headline text-2xl mb-4">Posicionamiento con IA</h3><p>Preparamos tu marca para ser la fuente de verdad que IAs como ChatGPT y Google SGE citan y recomiendan (AEO/LLM).</p></a>
-                <a href="servicios.html#paid-media" class="card p-8 scroll-reveal block" style="transition-delay: 100ms;"><h3 class="headline text-2xl mb-4">Paid Media Performance</h3><p>Campañas data-driven en Google, Meta y TikTok, diseñadas para un rendimiento y ROI excepcionales.</p></a>
-                <a href="servicios.html#creacion-ecommerce" class="card p-8 scroll-reveal block" style="transition-delay: 200ms;"><h3 class="headline text-2xl mb-4">E-commerce de Vanguardia</h3><p>Creamos plataformas de venta online rápidas, seguras y optimizadas para la máxima conversión.</p></a>
+        <section class="py-24 scroll-reveal">
+            <div class="mb-12"><h2 class="headline text-4xl">Un Ecosistema de Capacidades</h2><p class="text-lg text-[var(--gris-oscuro)] mt-4 max-w-2xl">Ofrecemos soluciones integrales para construir, lanzar y escalar tu presencia en línea.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg></div><div><h3 class="font-semibold text-lg">Creación Ecommerce (Shopify)</h3><p class="text-sm">Lanzamos tu tienda online optimizada para convertir.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /></svg></div><div><h3 class="font-semibold text-lg">Paid Media (Anuncios)</h3><p class="text-sm">Gestionamos tus anuncios en Meta, TikTok y Google.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div><div><h3 class="font-semibold text-lg">Posicionamiento IA / SEO</h3><p class="text-sm">Hacemos que tus clientes te encuentren en Google.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><div><h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3><p class="text-sm">Producción visual estratégica para tu catálogo.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L14.732 3.732z" /></svg></div><div><h3 class="font-semibold text-lg">Diseño (UX/UI) Optimization</h3><p class="text-sm">Auditamos y rediseñamos tu web para maximizar conversiones.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><div><h3 class="font-semibold text-lg">Estrategia 360° Ecommerce</h3><p class="text-sm">Gestión integral para un crecimiento sostenible y escalable.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div><div><h3 class="font-semibold text-lg">Email Marketing</h3><p class="text-sm">Automatizamos campañas para vender más y fidelizar.</p></div></div></a>
+                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><div><h3 class="font-semibold text-lg">Segmentación & Audiencias</h3><p class="text-sm">Identificamos y optimizamos las audiencias que convierten.</p></div></div></a>
             </div>
         </section>
-
-        <section class="py-24 text-center bg-fondo-oscuro text-texto-claro rounded-lg scroll-reveal">
-             <div class="max-w-3xl mx-auto px-4">
-                <h2 class="headline text-4xl text-[var(--fondo-crema)]">¿Listo para redefinir tu futuro digital?</h2>
-                <p class="text-xl text-[var(--muted)] mt-6 mb-10">La oportunidad es ahora. Hablemos de cómo podemos impulsar tu marca.</p>
-                <a href="contacto.html" class="btn">Iniciar Conversación</a>
+        <a href="https://cotizacion-xi.vercel.app/"
+        <section class="py-24 scroll-reveal">
+            <h2 class="headline text-4xl mb-4">Nuestro Proceso Colaborativo</h2><p class="text-lg text-[var(--gris-oscuro)] max-w-3xl mb-16">Un método ágil y transparente que garantiza la alineación con tus objetivos y la entrega de resultados excepcionales.</p>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-left">
+                <div class="process-step group"><div class="process-number group-hover:bg-rojo-acento group-hover:text-white transition-colors">1</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Inmersión</h3><p class="text-sm mt-2">Entendemos tu negocio, mercado y objetivos a fondo.</p></div>
+                <div class="process-step group"><div class="process-number group-hover:bg-rojo-acento group-hover:text-white transition-colors">2</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Estrategia</h3><p class="text-sm mt-2">Diseñamos un plan de acción data-driven y a medida.</p></div>
+                <div class="process-step group"><div class="process-number group-hover:bg-rojo-acento group-hover:text-white transition-colors">3</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Ejecución</h3><p class="text-sm mt-2">Creamos, desarrollamos y lanzamos las iniciativas.</p></div>
+                <div class="process-step group"><div class="process-number group-hover:bg-rojo-acento group-hover:text-white transition-colors">4</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Análisis</h3><p class="text-sm mt-2">Medimos el rendimiento y recopilamos insights clave.</p></div>
+                <div class="process-step group"><div class="process-number group-hover:bg-rojo-acento group-hover:text-white transition-colors">5</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Optimización</h3><p class="text-sm mt-2">Iteramos y mejoramos continuamente para maximizar el ROI.</p></div>
             </div>
+        </section>
+                
+        <section class="border border-linea-clara rounded-lg p-12 text-left my-20 scroll-reveal">
+            <h2 class="headline text-4xl mb-4">¿Listo para llevar tu marca al siguiente nivel?</h2>
+            <p class="text-xl text-[var(--gris-oscuro)] max-w-2xl mb-10">Hablemos sobre tus objetivos. Contáctanos para una consultoría gratuita y descubre cómo la precisión de PIXEL puede impulsar tu crecimiento.</p>
+            <a href="contacto.html" class="btn text-xl">Empezar mi Proyecto</a>
         </section>
     </main>
 
-    <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] text-center text-sm text-[var(--muted)]">
-        <span class="headline text-2xl text-[var(--rojo-acento)]">PIXEL</span>
-        <div class="flex justify-center space-x-6 my-4"><a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a></div>
-        <a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a>
-        <p class="mt-4">&copy; 2024 Pixel. Todos los derechos reservados.</p>
+    <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] flex flex-wrap justify-between items-center text-sm text-[var(--gris-oscuro)] gap-4">
+        <div><a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a><p class="mt-2">&copy; 2024 Pixel. Todos los derechos reservados.</p></div>
+        <div class="text-right"><div class="flex justify-end space-x-6 mb-2"><a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a></div><a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a></div>
     </footer>
     <script src="main.js"></script>
 </body>
