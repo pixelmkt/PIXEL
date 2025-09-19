@@ -3,10 +3,14 @@
     --fondo-crema: #F5F1E8;
     --rojo-acento: #C6341E;
     --gris-oscuro: #4A4A4A;
+    --muted: #6B7280;
     --linea-clara: #E0DACE;
     --texto-claro: #F5F1E8;
     --fondo-oscuro: #1E1E1E;
-    --naranja: #FF4D00; /* Color específico si es necesario */
+    --naranja: #FF4D00; /* Para los iconos de KPI */
+    --azul: #3A47F5;
+    --verde-feedback: #22C55E;
+    --rojo-feedback: #EF4444;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -14,26 +18,11 @@ body {
     font-family: 'IBM Plex Mono', monospace; -webkit-font-smoothing: antialiased;
     overflow-x: hidden; cursor: none;
 }
-.headline {
-    font-family: 'Playfair Display', serif; font-weight: 700;
-    color: var(--rojo-acento); line-height: 1.1; letter-spacing: -0.02em;
-}
-.text-highlight {
-    background-color: var(--rojo-acento); color: var(--fondo-crema);
-    padding: 0.05em 0.2em; line-height: 1.6; display: inline;
-    box-decoration-break: clone; -webkit-box-decoration-break: clone;
-}
-.btn {
-    background-color: var(--rojo-acento); color: var(--fondo-crema); border: 1px solid var(--rojo-acento);
-    cursor: none; padding: 0.9rem 2.5rem; border-radius: 999px; font-family: 'Inter', sans-serif;
-    font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
-    transition: all 0.3s ease; display: inline-block;
-}
+.headline { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--rojo-acento); line-height: 1.1; letter-spacing: -0.02em; }
+.text-highlight { background-color: var(--rojo-acento); color: var(--fondo-crema); padding: 0.05em 0.2em; line-height: 1.6; display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.btn { background-color: var(--rojo-acento); color: var(--fondo-crema); border: 1px solid var(--rojo-acento); cursor: none; padding: 0.9rem 2.5rem; border-radius: 999px; font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; display: inline-block; }
 .btn:hover { background-color: var(--fondo-oscuro); border-color: var(--fondo-oscuro); transform: translateY(-3px); }
-.service-card {
-    border: 1px solid var(--linea-clara); padding: 1.5rem; border-radius: 8px;
-    transition: all 0.3s ease; color: var(--gris-oscuro); background-color: white;
-}
+.service-card { border: 1px solid var(--linea-clara); padding: 1.5rem; border-radius: 8px; transition: all 0.3s ease; color: var(--gris-oscuro); background-color: white; }
 .service-card:hover { border-color: var(--rojo-acento); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.07); }
 .service-card:hover h3 { color: var(--rojo-acento); }
 .service-card svg { color: var(--rojo-acento); }
@@ -48,21 +37,13 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 a:hover ~ .cursor-outline, button:hover ~ .cursor-outline { transform: translate(-50%, -50%) scale(1.5); opacity: 0.5; border-color: var(--fondo-oscuro); }
 .prose { line-height: 1.8; }
 .prose h2 { font-family: 'Playfair Display', serif; color: var(--rojo-acento); margin-top: 2.5em; margin-bottom: 1.5em; }
-
 .process-step { position: relative; padding-top: 3.5rem; }
 .process-step::before { content: ''; position: absolute; top: 1.25rem; left: 50%; right: -50%; height: 2px; background-image: linear-gradient(to right, var(--linea-clara) 50%, transparent 50%); background-size: 10px 2px; background-repeat: repeat-x; }
 .process-step:first-child::before { left: 50%; }
 .process-step:last-child::before { right: 50%; }
 .process-number { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2.5rem; height: 2.5rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--rojo-acento); border: 2px solid var(--linea-clara); background-color: var(--fondo-crema); transition: all 0.3s ease; }
 .process-step:hover .process-number { background-color: var(--rojo-acento); color: var(--fondo-crema); border-color: var(--rojo-acento); }
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .carousel-track { display: flex; width: calc(384px * 8); animation: scroll 40s linear infinite; }
 .logo-marquee-track { display: flex; width: calc(200px * 24); animation: scroll 60s linear infinite; }
-.carousel-container:hover .carousel-track,
-.logo-marquee:hover .logo-marquee-track {
-    animation-play-state: paused;
-}
+.carousel-container:hover .carousel-track, .logo-marquee:hover .logo-marquee-track { animation-play-state: paused; }
