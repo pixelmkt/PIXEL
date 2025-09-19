@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>PIXEL • Agencia de Estrategia y Tecnología Digital</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="base.css"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PIXEL • Agencia de Estrategia y Tecnología Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="cursor-dot"></div><div class="cursor-outline"></div>
+    
     <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
@@ -22,64 +29,94 @@
             <a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
         </div>
     </header>
+
     <main>
-        <div class="max-w-5xl mx-auto px-4">
-            <section class="text-left py-24 md:py-32">
-                 <!-- INICIO DE LA SECCIÓN DEL HERO CON VIDEO -->
-                 <div class="absolute inset-0 top-0 left-0 h-[90vh] -z-10 overflow-hidden">
-                    <div class="absolute inset-0 bg-black/50"></div>
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
-                        <!-- URL DE TU VIDEO AQUÍ -->
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-background-of-a-gradient-of-red-and-orange-3013-large.mp4" type="video/mp4">
-                    </video>
-                 </div>
-                 <div class="h-[70vh] flex flex-col justify-center">
-                    <h1 class="headline text-5xl md:text-6xl text-white scroll-reveal">Transformamos <span class="text-highlight bg-rojo-acento text-white">Datos</span><br>en <span class="text-highlight bg-rojo-acento text-white">Dominio</span> Digital.</h1>
-                    <p class="text-lg md:text-xl mt-8 max-w-2xl text-white/90 scroll-reveal" style="transition-delay: 100ms;">Somos la agencia de estrategia y tecnología que decodifica el futuro. Fusionamos IA, Paid Media y desarrollo a medida para crear soluciones que no solo compiten, sino que lideran.</p>
-                    <div class="mt-12 scroll-reveal" style="transition-delay: 200ms;"><a href="https://cotizacion-xi.vercel.app/" target="_blank" class="btn text-lg">Explorar Servicios</a></div>
-                </div>
-            </section>
-        </div>
+        <!-- SECCIÓN HERO CON VIDEO -->
+        <section class="relative h-[90vh] flex items-center text-left overflow-hidden">
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-20">
+                <!-- ============================================= -->
+                <!-- PEGA LA URL DE TU VIDEO DE FONDO AQUÍ          -->
+                <!-- ============================================= -->
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-background-of-a-gradient-of-red-and-orange-3013-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/50 -z-10"></div>
+            <div class="max-w-5xl mx-auto px-4 relative z-10">
+                <h1 class="headline text-5xl md:text-6xl text-white scroll-reveal">Transformamos <span class="text-highlight bg-rojo-acento text-white">Datos</span><br>en <span class="text-highlight bg-rojo-acento text-white">Dominio</span> Digital.</h1>
+            </div>
+        </section>
 
+        <!-- Contenedor principal para el resto del contenido -->
         <div class="max-w-7xl mx-auto px-4">
-            <section class="max-w-5xl mx-auto py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-b border-[var(--linea-clara)]">
-                <div class="scroll-reveal"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div><p class="text-4xl font-bold">1.8%</p><p class="font-semibold mt-2">{ Conversion Rate }</p><p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p></div>
-                <div class="scroll-reveal" style="transition-delay: 100ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div><p class="text-4xl font-bold">8 semanas</p><p class="font-semibold mt-2">{ On Air }</p><p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p></div>
-                <div class="scroll-reveal" style="transition-delay: 200ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div><p class="text-4xl font-bold">$ 16.3M</p><p class="font-semibold mt-2">{ Millones USD por año }</p><p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p></div>
-                <div class="scroll-reveal" style="transition-delay: 300ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div><p class="text-4xl font-bold">9 años</p><p class="font-semibold mt-2">{ Experiencia }</p><p class="text-sm mt-2 text-[var(--muted)]">Desde el 2016, ejecutando cientos de proyectos de toda dimensión.</p></div>
-            </section>
+            <div class="max-w-5xl mx-auto">
+                <!-- SECCIÓN DE KPIs -->
+                <section class="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-b border-[var(--linea-clara)]">
+                    <div class="scroll-reveal">
+                        <div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+                        <p class="text-4xl font-bold">1.8%</p><p class="font-semibold mt-2">{ Conversion Rate }</p><p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p>
+                    </div>
+                    <div class="scroll-reveal" style="transition-delay: 100ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div><p class="text-4xl font-bold">8 semanas</p><p class="font-semibold mt-2">{ On Air }</p><p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p></div>
+                    <div class="scroll-reveal" style="transition-delay: 200ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div><p class="text-4xl font-bold">$ 16.3M</p><p class="font-semibold mt-2">{ Millones USD por año }</p><p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p></div>
+                    <div class="scroll-reveal" style="transition-delay: 300ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div><p class="text-4xl font-bold">9 años</p><p class="font-semibold mt-2">{ Experiencia }</p><p class="text-sm mt-2 text-[var(--muted)]">Desde el 2016, ejecutando cientos de proyectos de toda dimensión.</p></div>
+                </section>
+            </div>
         </div>
 
+        <!-- SECCIÓN CARRUSEL (Ancho completo) -->
         <section class="py-20 scroll-reveal">
             <div class="carousel-container w-full overflow-hidden relative">
-                <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-fondo-crema z-10"></div><div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-fondo-crema z-10"></div>
+                <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-fondo-crema z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-fondo-crema z-10"></div>
                 <div class="carousel-track">
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full"></a></div>
+                    <!-- ========================================= -->
+                    <!-- PEGA TUS LINKS DE IMÁGENES PNG AQUÍ (x8)  -->
+                    <!-- ========================================= -->
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MARQUESINA (Ancho completo) -->
+        <section class="py-12 scroll-reveal bg-gray-100/50">
+             <div class="logo-marquee w-full overflow-hidden relative py-8">
+                <div class="logo-marquee-track">
+                    <!-- =================================== -->
+                    <!-- PEGA LOS LOGOS DE TUS CLIENTES AQUÍ -->
+                    <!-- =================================== -->
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" alt="Exit" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/barrington-logo-vector.png" alt="Barrington" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/loccitane-en-provence-logo-vector.png" alt="L'Occitane" class="h-6 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/nua-logo-vector.png" alt="Nua" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/mch-logo-vector.png" alt="MCH" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/esika-logo-vector.png" alt="Esika" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/san-fernando-logo-vector.png" alt="San Fernando" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oechsle-logo-vector.png" alt="Oechsle" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oster-logo-vector.png" alt="Oster" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/fina-logo-vector.png" alt="Fina" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/bebemundo-logo-vector.png" alt="Bebemundo" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" alt="Epicentro" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" alt="Exit" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/barrington-logo-vector.png" alt="Barrington" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/loccitane-en-provence-logo-vector.png" alt="L'Occitane" class="h-6 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/nua-logo-vector.png" alt="Nua" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/mch-logo-vector.png" alt="MCH" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/esika-logo-vector.png" alt="Esika" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/san-fernando-logo-vector.png" alt="San Fernando" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oechsle-logo-vector.png" alt="Oechsle" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oster-logo-vector.png" alt="Oster" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/fina-logo-vector.png" alt="Fina" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/bebemundo-logo-vector.png" alt="Bebemundo" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" alt="Epicentro" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
                 </div>
             </div>
         </section>
         
-        <section class="py-12 scroll-reveal bg-gray-100/50">
-             <div class="logo-marquee w-full overflow-hidden relative py-8">
-                <div class="logo-marquee-track">
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none"></div>
-                    <!-- Repite para todos tus logos -->
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none"></div>
-                    <!-- Duplicados -->
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none"></div>
-                     <!-- Repite para todos tus logos duplicados -->
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none"></div>
-                </div>
-            </div>
-        </section>
-
         <div class="max-w-5xl mx-auto px-4">
             <section class="py-24 scroll-reveal">
                 <div class="mb-12"><h2 class="headline text-4xl">Un Ecosistema de Capacidades</h2><p class="text-lg mt-4 max-w-2xl">Ofrecemos soluciones integrales para construir, lanzar y escalar tu presencia en línea.</p></div>
@@ -105,7 +142,7 @@
             </section>
             
             <section class="border border-linea-clara rounded-lg p-12 text-left my-20 scroll-reveal">
-                <h2 class="headline text-4xl mb-4">¿Listo para llevar tu marca al siguiente nivel?</h2>
+                 <h2 class="headline text-4xl mb-4">¿Listo para llevar tu marca al siguiente nivel?</h2>
                 <p class="text-xl text-[var(--gris-oscuro)] max-w-2xl mb-10">Hablemos sobre tus objetivos. Contáctanos para una consultoría gratuita y descubre cómo la precisión de PIXEL puede impulsar tu crecimiento.</p>
                 <a href="contacto.html" class="btn text-xl">Empezar mi Proyecto</a>
             </section>
