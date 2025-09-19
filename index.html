@@ -6,7 +6,7 @@
     <title>PIXEL • Agencia de Estrategia y Tecnología Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -31,92 +31,51 @@
     </header>
 
     <main>
-        <!-- SECCIÓN HERO CON VIDEO -->
-        <section class="relative h-[90vh] flex items-center text-left overflow-hidden">
-            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-20">
-                <!-- ============================================= -->
-                <!-- PEGA LA URL DE TU VIDEO DE FONDO AQUÍ          -->
-                <!-- ============================================= -->
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-background-of-a-gradient-of-red-and-orange-3013-large.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-black/50 -z-10"></div>
-            <div class="max-w-5xl mx-auto px-4 relative z-10">
-                <h1 class="headline text-5xl md:text-6xl text-white scroll-reveal">Transformamos <span class="text-highlight bg-rojo-acento text-white">Datos</span><br>en <span class="text-highlight bg-rojo-acento text-white">Dominio</span> Digital.</h1>
-            </div>
-        </section>
-
-        <!-- Contenedor principal para el resto del contenido -->
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <!-- SECCIÓN DE KPIs -->
-                <section class="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-b border-[var(--linea-clara)]">
-                    <div class="scroll-reveal">
-                        <div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                        <p class="text-4xl font-bold">1.8%</p><p class="font-semibold mt-2">{ Conversion Rate }</p><p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p>
-                    </div>
-                    <div class="scroll-reveal" style="transition-delay: 100ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div><p class="text-4xl font-bold">8 semanas</p><p class="font-semibold mt-2">{ On Air }</p><p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p></div>
-                    <div class="scroll-reveal" style="transition-delay: 200ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div><p class="text-4xl font-bold">$ 16.3M</p><p class="font-semibold mt-2">{ Millones USD por año }</p><p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p></div>
-                    <div class="scroll-reveal" style="transition-delay: 300ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div><p class="text-4xl font-bold">9 años</p><p class="font-semibold mt-2">{ Experiencia }</p><p class="text-sm mt-2 text-[var(--muted)]">Desde el 2016, ejecutando cientos de proyectos de toda dimensión.</p></div>
-                </section>
-            </div>
+        <div class="max-w-5xl mx-auto px-4">
+            <section class="text-left py-24 md:py-32">
+                <h1 class="headline text-5xl md:text-6xl scroll-reveal">Transformamos <span class="text-highlight">Datos</span><br>en <span class="text-highlight">Dominio</span> Digital.</h1>
+                <p class="text-lg md:text-xl mt-8 max-w-2xl scroll-reveal" style="transition-delay: 100ms;">Somos la agencia de estrategia y tecnología que decodifica el futuro. Fusionamos IA, Paid Media y desarrollo a medida para crear soluciones que no solo compiten, sino que lideran.</p>
+                <div class="mt-12 scroll-reveal" style="transition-delay: 200ms;"><a href="https://cotizacion-xi.vercel.app/" target="_blank" class="btn text-lg">Explorar Servicios</a></div>
+            </section>
         </div>
 
-        <!-- SECCIÓN CARRUSEL (Ancho completo) -->
+        <section class="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-y border-[var(--linea-clara)]">
+            <div class="scroll-reveal"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div><p class="text-4xl font-bold">1.8%</p><p class="font-semibold mt-2">{ Conversion Rate }</p><p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p></div>
+            <div class="scroll-reveal" style="transition-delay: 100ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div><p class="text-4xl font-bold">8 semanas</p><p class="font-semibold mt-2">{ On Air }</p><p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p></div>
+            <div class="scroll-reveal" style="transition-delay: 200ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div><p class="text-4xl font-bold">$ 16.3M</p><p class="font-semibold mt-2">{ Millones USD por año }</p><p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p></div>
+            <div class="scroll-reveal" style="transition-delay: 300ms;"><div class="text-[var(--naranja)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div><p class="text-4xl font-bold">9 años</p><p class="font-semibold mt-2">{ Experiencia }</p><p class="text-sm mt-2 text-[var(--muted)]">Cientos de proyectos ejecutados con éxito desde 2016.</p></div>
+        </section>
+
         <section class="py-20 scroll-reveal">
             <div class="carousel-container w-full overflow-hidden relative">
                 <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-fondo-crema z-10"></div>
                 <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-fondo-crema z-10"></div>
                 <div class="carousel-track">
-                    <!-- ========================================= -->
-                    <!-- PEGA TUS LINKS DE IMÁGENES PNG AQUÍ (x8)  -->
-                    <!-- ========================================= -->
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/yVv2YyV.png" alt="Proyecto 1" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/sF8gQyW.png" alt="Proyecto 2" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/bZ3xYyM.png" alt="Proyecto 3" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
-                    <div class="w-96 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/L7e6uCo.png" alt="Proyecto 4" class="w-full transition-transform duration-300 hover:scale-105"></a></div>
+                    <!-- ========== PEGA TUS LINKS DE IMAGEN PNG AQUÍ (6 en total, duplicando las primeras 3) ========== -->
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_1.png" alt="Proyecto 1"></a></div>
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_2.png" alt="Proyecto 2"></a></div>
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_3.png" alt="Proyecto 3"></a></div>
+                    <!-- Duplicados -->
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_1.png" alt="Proyecto 1"></a></div>
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_2.png" alt="Proyecto 2"></a></div>
+                    <div class="w-128 flex-shrink-0 px-4"><a href="proyectos.html"><img src="https://i.imgur.com/your_image_3.png" alt="Proyecto 3"></a></div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN MARQUESINA (Ancho completo) -->
         <section class="py-12 scroll-reveal bg-gray-100/50">
              <div class="logo-marquee w-full overflow-hidden relative py-8">
                 <div class="logo-marquee-track">
-                    <!-- =================================== -->
-                    <!-- PEGA LOS LOGOS DE TUS CLIENTES AQUÍ -->
-                    <!-- =================================== -->
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" alt="Exit" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/barrington-logo-vector.png" alt="Barrington" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/loccitane-en-provence-logo-vector.png" alt="L'Occitane" class="h-6 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/nua-logo-vector.png" alt="Nua" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/mch-logo-vector.png" alt="MCH" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/esika-logo-vector.png" alt="Esika" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/san-fernando-logo-vector.png" alt="San Fernando" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oechsle-logo-vector.png" alt="Oechsle" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oster-logo-vector.png" alt="Oster" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/fina-logo-vector.png" alt="Fina" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/bebemundo-logo-vector.png" alt="Bebemundo" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" alt="Epicentro" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/exit-logo-vector.png" alt="Exit" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/barrington-logo-vector.png" alt="Barrington" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/loccitane-en-provence-logo-vector.png" alt="L'Occitane" class="h-6 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/nua-logo-vector.png" alt="Nua" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/mch-logo-vector.png" alt="MCH" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/esika-logo-vector.png" alt="Esika" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/san-fernando-logo-vector.png" alt="San Fernando" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oechsle-logo-vector.png" alt="Oechsle" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/oster-logo-vector.png" alt="Oster" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/fina-logo-vector.png" alt="Fina" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/bebemundo-logo-vector.png" alt="Bebemundo" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
-                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://logovector.net/wp-content/uploads/2021/02/epicentro-logo-vector.png" alt="Epicentro" class="h-10 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                     <!-- ========== PEGA LOS LOGOS DE TUS CLIENTES/PARTNERS AQUÍ (12, duplicados) ========== -->
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Shopify_logo_2018.svg" alt="Shopify" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Google_Ads_logo.svg" alt="Google Ads" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Meta_Inc._logo.svg" alt="Meta" class="h-6 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <div class="w-[200px] flex-shrink-0 px-8 flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok" class="h-8 filter grayscale opacity-60 hover:opacity-100 hover:filter-none transition-all"></div>
+                    <!-- ... más logos ... -->
                 </div>
             </div>
         </section>
-        
+
         <div class="max-w-5xl mx-auto px-4">
             <section class="py-24 scroll-reveal">
                 <div class="mb-12"><h2 class="headline text-4xl">Un Ecosistema de Capacidades</h2><p class="text-lg mt-4 max-w-2xl">Ofrecemos soluciones integrales para construir, lanzar y escalar tu presencia en línea.</p></div>
@@ -127,18 +86,20 @@
                     <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><div><h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3><p class="text-sm">Producción visual estratégica para tu catálogo.</p></div></div></a>
                     <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L14.732 3.732z" /></svg></div><div><h3 class="font-semibold text-lg">Diseño (UX/UI) Optimization</h3><p class="text-sm">Auditamos y rediseñamos tu web para maximizar conversiones.</p></div></div></a>
                     <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><div><h3 class="font-semibold text-lg">Estrategia 360° Ecommerce</h3><p class="text-sm">Gestión integral para un crecimiento sostenible y escalable.</p></div></div></a>
+                    <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div><div><h3 class="font-semibold text-lg">Email Marketing</h3><p class="text-sm">Automatizamos campañas para vender más y fidelizar.</p></div></div></a>
+                    <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div class="bg-gray-100 p-3 rounded-md"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><div><h3 class="font-semibold text-lg">Segmentación & Audiencias</h3><p class="text-sm">Identificamos y optimizamos las audiencias que convierten.</p></div></div></a>
                 </div>
             </section>
             
             <section class="py-24 scroll-reveal">
-                <h2 class="headline text-4xl mb-4">Nuestro Proceso Colaborativo</h2><p class="text-lg text-[var(--gris-oscuro)] max-w-3xl mb-16">Un método ágil y transparente que garantiza la alineación con tus objetivos y la entrega de resultados excepcionales.</p>
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-left">
+                 <h2 class="headline text-4xl mb-4">Nuestro Proceso Colaborativo</h2><p class="text-lg text-[var(--gris-oscuro)] max-w-3xl mb-16">Un método ágil y transparente que garantiza la alineación con tus objetivos y la entrega de resultados excepcionales.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-left">
                     <div class="process-step group"><div class="process-number">1</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Inmersión</h3><p class="text-sm mt-2">Entendemos tu negocio, mercado y objetivos a fondo.</p></div>
                     <div class="process-step group"><div class="process-number">2</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Estrategia</h3><p class="text-sm mt-2">Diseñamos un plan de acción data-driven y a medida.</p></div>
                     <div class="process-step group"><div class="process-number">3</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Ejecución</h3><p class="text-sm mt-2">Creamos, desarrollamos y lanzamos las iniciativas.</p></div>
                     <div class="process-step group"><div class="process-number">4</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Análisis</h3><p class="text-sm mt-2">Medimos el rendimiento y recopilamos insights clave.</p></div>
                     <div class="process-step group"><div class="process-number">5</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Optimización</h3><p class="text-sm mt-2">Iteramos y mejoramos continuamente para maximizar el ROI.</p></div>
-                </div>
+                 </div>
             </section>
             
             <section class="border border-linea-clara rounded-lg p-12 text-left my-20 scroll-reveal">
