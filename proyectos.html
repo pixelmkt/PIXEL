@@ -7,9 +7,20 @@
   <link rel="stylesheet" href="base.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body{ cursor:auto; }
+    .case-img{
+      height: 24rem; width:100%;
+      object-fit: cover; border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
+      background: #fff;
+    }
+    @media (min-width: 768px){ .case-img{ height: 30rem; } }
+  </style>
 </head>
 <body>
   <div class="cursor-dot"></div><div class="cursor-outline"></div>
+
   <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
@@ -29,31 +40,78 @@
   </header>
 
   <main class="max-w-5xl mx-auto px-4 pt-20 pb-20">
-    <h1 class="headline text-center text-5xl md:text-6xl mb-16 scroll-reveal">Casos de Éxito</h1>
+    <h1 class="headline text-center text-5xl md:text-6xl mb-16 scroll-reveal">Nuestros mejores proyectos</h1>
+
     <div class="space-y-24">
+
+      <!-- 1) Virago Dress -->
       <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-        <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block group">
-          <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?q=80&w=1974&auto=format&fit=crop" class="rounded-lg w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" alt="Fiji Swim">
+        <a href="https://viragodress.com/" target="_blank" class="block group">
+          <img class="case-img" data-drive-id="1GQPrHHsGYqp3vAInNrBqT_G1A-_JACml" alt="Virago Dress – Shopify + Paid Media" draggable="false">
         </a>
         <div>
-          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Fiji Swim</div>
-          <h2 class="headline text-4xl mt-4">Lanzamiento <span class="text-highlight">Explosivo</span></h2>
-          <p class="text-lg mt-4">Desarrollamos su e-commerce en Shopify y ejecutamos una estrategia de Paid Media en Meta e Instagram, resultando en un +150% de ventas sobre el objetivo en su temporada de lanzamiento.</p>
+          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Virago Dress</div>
+          <h2 class="headline text-4xl mt-4">Ecommerce que <span class="text-highlight">escala</span></h2>
+          <p class="text-lg mt-4">
+            Montamos la tienda en Shopify con arquitectura de conversión y ejecutamos una estrategia de Paid Media full‑funnel.
+            Resultado: <strong>crecimiento sostenido en ventas</strong> y un <strong>posicionamiento sólido</strong> en su categoría.
+          </p>
+          <a href="https://viragodress.com/" target="_blank" class="btn mt-6 inline-block">Visitar sitio</a>
         </div>
       </section>
 
+      <!-- 2) Lab Nutrition (SEGUNDO) -->
       <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
         <div class="md:order-2">
-          <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block group">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" class="rounded-lg w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" alt="Lab Nutrition">
+          <a href="https://www.labnutrition.com/" target="_blank" class="block group">
+            <img class="case-img" data-drive-id="1ToJ_usOZsdfB5jtmxT74wMJMAqw-OAkM" alt="Lab Nutrition – CRM + Paid Media 360 + Integraciones" draggable="false">
           </a>
         </div>
-        <div class="md:order-1 text-right">
+        <div class="md:order-1">
           <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Lab Nutrition</div>
-          <h2 class="headline text-4xl mt-4">Optimización y <span class="text-highlight">Escalabilidad</span></h2>
-          <p class="text-lg mt-4">Auditamos y rediseñamos la estrategia de performance. Mediante la implementación de un sistema de análisis predictivo con IA y la optimización del CRM, aumentamos la tasa de recompra en un 40%.</p>
+          <h2 class="headline text-4xl mt-4">Escala con <span class="text-highlight">sistema</span></h2>
+          <p class="text-lg mt-4">
+            Estrategia 360: CRM, automatizaciones, integraciones y Paid Media multicanal.
+            Resultado: <strong>+45% de crecimiento</strong> vs. 2024 y una operación preparada para escalar.
+          </p>
+          <a href="https://www.labnutrition.com/" target="_blank" class="btn mt-6 inline-block">Visitar sitio</a>
         </div>
       </section>
+
+      <!-- 3) Fiji Swimwear -->
+      <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
+        <div class="md:order-2">
+          <a href="https://fijiswimwear.pe/" target="_blank" class="block group">
+            <img class="case-img" data-drive-id="11H7hzUZ3AUAcut9sspdyR9c7s674bnR4" alt="Fiji Swimwear – Web + Integraciones + Paid Media" draggable="false">
+          </a>
+        </div>
+        <div class="md:order-1">
+          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Fiji Swimwear</div>
+          <h2 class="headline text-4xl mt-4">De cero a <span class="text-highlight">exponencial</span></h2>
+          <p class="text-lg mt-4">
+            Desarrollo web, integraciones clave (pagos, logística y analítica) y lanzamiento de Paid Media.
+            En los <strong>primeros 3 meses</strong> la marca registró un <strong>crecimiento exponencial</strong> en tráfico y ventas.
+          </p>
+          <a href="https://fijiswimwear.pe/" target="_blank" class="btn mt-6 inline-block">Visitar sitio</a>
+        </div>
+      </section>
+
+      <!-- 4) TeenLife Perú -->
+      <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
+        <a href="https://teenlifeperu.com/" target="_blank" class="block group">
+          <img class="case-img" data-drive-id="1uwqiH25sZg10-BpUjQio85hi5FwPNi2w" alt="TeenLife Perú – UX/UI Optimization + Meta Ads" draggable="false">
+        </a>
+        <div>
+          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">TeenLife Perú</div>
+          <h2 class="headline text-4xl mt-4">UX que convierte, Ads que <span class="text-highlight">empujan</span></h2>
+          <p class="text-lg mt-4">
+            Rediseñamos UX/UI para reducir fricción y relanzamos campañas en Meta Ads.
+            El negocio marcó un <strong>+70% en ventas</strong> durante los dos primeros meses post‑optimización.
+          </p>
+          <a href="https://teenlifeperu.com/" target="_blank" class="btn mt-6 inline-block">Visitar sitio</a>
+        </div>
+      </section>
+
     </div>
   </main>
 

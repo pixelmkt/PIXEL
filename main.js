@@ -1,50 +1,86 @@
-// main.js — Corregido (sin cursor personalizado)
+// main.js — Menú, animaciones, slider con flechas y carga robusta de imágenes de Google Drive
 document.addEventListener('DOMContentLoaded', () => {
-  // Menú móvil
+  /* ========== Menú móvil ========== */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
   }
 
-  // Scroll reveal con IntersectionObserver (fallback si no hay GSAP)
+  /* ========== Animaciones (GSAP si disponible; si no, IntersectionObserver) ========== */
   const runIO = () => {
-    const observer = new IntersectionObserver((entries) => {
+    const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('is-visible'));
     }, { threshold: 0.1 });
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.scroll-reveal').forEach(el => io.observe(el));
   };
-
-  // Si cargas GSAP, úsalo; si no, usa IO
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
-
-    // reveal general
     document.querySelectorAll('.scroll-reveal').forEach(el => {
-      gsap.fromTo(el, { y: 50, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 1.2, ease: 'power3.out',
+      gsap.fromTo(el, { y: 40, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
         scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
       });
     });
-
-    // Efecto magnético opcional
-    const magneticElements = document.querySelectorAll('[data-magnetic]');
-    if (window.matchMedia('(pointer: fine)').matches) {
-      magneticElements.forEach(el => {
-        el.addEventListener('mousemove', (e) => {
-          const r = el.getBoundingClientRect();
-          const x = e.clientX - r.left - r.width/2;
-          const y = e.clientY - r.top - r.height/2;
-          gsap.to(el, { x: x*0.3, y: y*0.3, duration: 0.8, ease: 'elastic.out(1,0.3)' });
-        });
-        el.addEventListener('mouseleave', () => gsap.to(el, { x:0, y:0, duration:0.5, ease:'power3.out' }));
-      });
-    }
   } else {
     runIO();
   }
 
-  // Formspree (Contacto)
+  /* ========== Carga robusta de imágenes de Google Drive ========== */
+  const loadDriveImage = (img, id) => {
+    const candidates = [
+      `https://drive.google.com/uc?export=download&id=${id}`,
+      `https://drive.google.com/uc?export=view&id=${id}`,
+      `https://drive.google.com/thumbnail?id=${id}&sz=w2000`,
+      `https://lh3.googleusercontent.com/d/${id}=w2000`
+    ];
+    let i = 0;
+    const tryNext = () => {
+      if (i < candidates.length) {
+        img.src = candidates[i++];
+      } else {
+        img.removeEventListener('error', tryNext);
+      }
+    };
+    img.addEventListener('error', tryNext);
+    tryNext();
+  };
+
+  document.querySelectorAll('img[data-drive-id]').forEach(img => {
+    const id = img.getAttribute('data-drive-id');
+    if (id) loadDriveImage(img, id);
+  });
+
+  /* ========== Slider con flechas (Home) ========== */
+  const viewport = document.querySelector('[data-carousel]');
+  if (viewport) {
+    const leftBtn = document.querySelector('[data-carousel-left]');
+    const rightBtn = document.querySelector('[data-carousel-right]');
+    const scrollBy = () => Math.max(320, Math.floor(viewport.clientWidth * 0.9));
+
+    if (leftBtn) leftBtn.addEventListener('click', () => viewport.scrollBy({ left: -scrollBy(), behavior: 'smooth' }));
+    if (rightBtn) rightBtn.addEventListener('click', () => viewport.scrollBy({ left:  scrollBy(), behavior: 'smooth' }));
+
+    // Drag con mouse/rueda
+    let isDown = false, startX = 0, startLeft = 0;
+    viewport.addEventListener('mousedown', (e) => { isDown = true; startX = e.pageX; startLeft = viewport.scrollLeft; viewport.classList.add('dragging'); });
+    window.addEventListener('mouseup', () => { isDown = false; viewport.classList.remove('dragging'); });
+    viewport.addEventListener('mouseleave', () => { isDown = false; viewport.classList.remove('dragging'); });
+    viewport.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const walk = (e.pageX - startX) * 1.2;
+      viewport.scrollLeft = startLeft - walk;
+    });
+    viewport.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        viewport.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    }, { passive: false });
+  }
+
+  /* ========== Formulario de contacto (si existe) ========== */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
