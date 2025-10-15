@@ -1,92 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>PIXEL • Agencia de Estrategia y Tecnología Digital</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIXEL • Agencia de Estrategia y Tecnología Digital</title>
+
+  <!-- Tailwind + estilos del proyecto -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="base.css">
+
+  <!-- Fuentes e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Ajustes locales -->
+  <style>
+    /* Asegurar puntero visible (override por si en base.css hay cursor:none) */
+    body { cursor: auto; }
+    .btn { cursor: pointer; }
+
+    /* Logos Paid Media: caja uniforme y escalado contenido */
+    .logo-box{
+      width: 200px;  /* ancho uniforme desktop */
+      height: 70px;  /* alto uniforme desktop */
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-box img{
+      max-width: 100%;
+      max-height: 100%;
+      width: auto; height: auto; display: block;
+    }
+    /* Reducir solo Meta y Shopify */
+    .logo-box img.logo--meta,
+    .logo-box img.logo--shopify{
+      max-width: 82%;
+      max-height: 82%;
+    }
+    @media (max-width: 767px){
+      .logo-box{ width: 150px; height: 56px; }
+      .logo-box img.logo--meta,
+      .logo-box img.logo--shopify{ max-width: 80%; max-height: 80%; }
+    }
+  </style>
 </head>
 <body>
-    <div class="cursor-dot"></div><div class="cursor-outline"></div>
-    <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--gris-oscuro)]">
-                <a href="proyectos.html" class="nav-link transition-colors">Proyectos</a>
-                <a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">Posicionamiento en IA</a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">¿Qué hacemos?</a>
-                <a href="contacto.html" class="nav-link transition-colors">Contacto</a>
-            </nav>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--gris-oscuro)]"><i class="fas fa-bars"></i></button>
+  <div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--gris-oscuro)]">
+        <a href="proyectos.html" class="nav-link transition-colors">Proyectos</a>
+        <a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color:#C6341E;">Posicionamiento en IA</a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color:#C6341E;">¿Qué hacemos?</a>
+        <a href="contacto.html" class="nav-link transition-colors">Contacto</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--gris-oscuro)]"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-fondo-crema/95 border-t border-[var(--linea-clara)]">
+      <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Inicio</a>
+      <a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Proyectos</a>
+      <a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4">
+    <!-- HERO -->
+    <section class="text-left py-24 md:py-32">
+      <h1 class="headline text-5xl md:text-6xl scroll-reveal">
+        Transformamos <span class="text-highlight">Datos</span><br>en <span class="text-highlight">Dominio</span> Digital.
+      </h1>
+      <p class="text-lg md:text-xl mt-8 max-w-2xl scroll-reveal" style="transition-delay:100ms;">
+        Somos la agencia de estrategia y tecnología que decodifica el futuro. Fusionamos IA, Paid Media y desarrollo a medida para crear soluciones que no solo compiten, sino que lideran.
+      </p>
+      <div class="mt-12 scroll-reveal" style="transition-delay:200ms;">
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="btn text-lg">Explorar Servicios</a>
+      </div>
+    </section>
+
+    <!-- KPIs -->
+    <section class="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-y border-[var(--linea-clara)]">
+      <div class="scroll-reveal">
+        <div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+        <p class="text-4xl font-bold">1.8%</p>
+        <p class="font-semibold mt-2">{ Conversion Rate }</p>
+        <p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p>
+      </div>
+      <div class="scroll-reveal" style="transition-delay:100ms;">
+        <div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div>
+        <p class="text-4xl font-bold">8 semanas</p>
+        <p class="font-semibold mt-2">{ On Air }</p>
+        <p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p>
+      </div>
+      <div class="scroll-reveal" style="transition-delay:200ms;">
+        <div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div>
+        <p class="text-4xl font-bold">$ 16.3M</p>
+        <p class="font-semibold mt-2">{ Millones USD por año }</p>
+        <p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p>
+      </div>
+      <div class="scroll-reveal" style="transition-delay:300ms;">
+        <div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div>
+        <p class="text-4xl font-bold">9 años</p>
+        <p class="font-semibold mt-2">{ Experiencia }</p>
+        <p class="text-sm mt-2 text-[var(--muted)]">Cientos de proyectos ejecutados con éxito desde 2016.</p>
+      </div>
+    </section>
+
+    <!-- Expertos en estrategia Paid Media (SIN enlaces; logos a tamaño uniforme) -->
+    <section class="py-16">
+      <h3 class="headline text-center text-4xl md:text-5xl mb-10">Expertos en estrategia Paid Media</h3>
+      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-items-center">
+        <div class="logo-box">
+          <img class="logo--meta" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta">
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-fondo-crema/95 border-t border-[var(--linea-clara)]">
-            <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Inicio</a><a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Proyectos</a><a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
+        <div class="logo-box">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Tiktok_logo_text.svg" alt="TikTok">
         </div>
-    </header>
+        <div class="logo-box">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" alt="Google Ads">
+        </div>
+        <div class="logo-box">
+          <img class="logo--shopify" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify">
+        </div>
+      </div>
+    </section>
 
-    <main class="max-w-5xl mx-auto px-4">
-        <section class="text-left py-24 md:py-32">
-            <h1 class="headline text-5xl md:text-6xl scroll-reveal">Transformamos <span class="text-highlight">Datos</span><br>en <span class="text-highlight">Dominio</span> Digital.</h1>
-            <p class="text-lg md:text-xl mt-8 max-w-2xl scroll-reveal" style="transition-delay: 100ms;">Somos la agencia de estrategia y tecnología que decodifica el futuro. Fusionamos IA, Paid Media y desarrollo a medida para crear soluciones que no solo compiten, sino que lideran.</p>
-            <div class="mt-12 scroll-reveal" style="transition-delay: 200ms;"><a href="https://cotizacion-umber.vercel.app/" target="_blank" class="btn text-lg">Explorar Servicios</a></div>
-        </section>
+    <!-- Un Ecosistema de Capacidades -->
+    <section class="py-24 scroll-reveal">
+      <div class="mb-12">
+        <h2 class="headline text-4xl">Un Ecosistema de Capacidades</h2>
+        <p class="text-lg mt-4 max-w-2xl">Ofrecemos soluciones integrales para construir, lanzar y escalar tu presencia en línea.</p>
+      </div>
 
-        <section class="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center border-y border-[var(--linea-clara)]">
-            <div class="scroll-reveal"><div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-chart-line"></i></div><p class="text-4xl font-bold">1.8%</p><p class="font-semibold mt-2">{ Conversion Rate }</p><p class="text-sm mt-2 text-[var(--muted)]">Logramos un ratio de conversión promedio saludable y sostenido.</p></div>
-            <div class="scroll-reveal" style="transition-delay: 100ms;"><div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-cloud-upload-alt"></i></div><p class="text-4xl font-bold">8 semanas</p><p class="font-semibold mt-2">{ On Air }</p><p class="text-sm mt-2 text-[var(--muted)]">Lanzamiento de tiendas online optimizadas en tiempo récord.</p></div>
-            <div class="scroll-reveal" style="transition-delay: 200ms;"><div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-dollar-sign"></i></div><p class="text-4xl font-bold">$ 16.3M</p><p class="font-semibold mt-2">{ Millones USD por año }</p><p class="text-sm mt-2 text-[var(--muted)]">Gestión de marcas con alta transaccionalidad y resultados óptimos.</p></div>
-            <div class="scroll-reveal" style="transition-delay: 300ms;"><div class="text-[var(--rojo-acento)] text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div><p class="text-4xl font-bold">9 años</p><p class="font-semibold mt-2">{ Experiencia }</p><p class="text-sm mt-2 text-[var(--muted)]">Cientos de proyectos ejecutados con éxito desde 2016.</p></div>
-        </section>
-
-        <section class="py-24 scroll-reveal">
-            <div class="mb-12"><h2 class="headline text-4xl">Un Ecosistema de Capacidades</h2><p class="text-lg mt-4 max-w-2xl">Ofrecemos soluciones integrales para construir, lanzar y escalar tu presencia en línea.</p></div>
-            <!-- Versión para Desktop (Grid) -->
-            <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-shopping-cart fa-2x"></i></div><div><h3 class="font-semibold text-lg">Creación Ecommerce (Shopify)</h3><p class="text-sm">Lanzamos tu tienda online optimizada para convertir y crecer desde el día uno.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-bullhorn fa-2x"></i></div><div><h3 class="font-semibold text-lg">Paid Media (Anuncios)</h3><p class="text-sm">Gestionamos tus anuncios en Meta, TikTok y Google para obtener un ROI real.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-search-dollar fa-2x"></i></div><div><h3 class="font-semibold text-lg">Posicionamiento IA / SEO</h3><p class="text-sm">Hacemos que tus clientes te encuentren en Google antes que a tu competencia.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-camera-retro fa-2x"></i></div><div><h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3><p class="text-sm">Producción visual estratégica para que tu catálogo enamore y venda más.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-drafting-compass fa-2x"></i></div><div><h3 class="font-semibold text-lg">Diseño (UX/UI) Optimization</h3><p class="text-sm">Auditamos y rediseñamos tu web para maximizar las conversiones.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-cogs fa-2x"></i></div><div><h3 class="font-semibold text-lg">Estrategia 360° Ecommerce</h3><p class="text-sm">Gestión integral para un crecimiento sostenible y escalable.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-envelope-open-text fa-2x"></i></div><div><h3 class="font-semibold text-lg">Email Marketing</h3><p class="text-sm">Automatizamos campañas para vender más y fidelizar a tus clientes.</p></div></div></a>
-                <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card"><div class="flex items-center gap-4"><div><i class="fas fa-users-cog fa-2x"></i></div><div><h3 class="font-semibold text-lg">Segmentación & Audiencias</h3><p class="text-sm">Identificamos y optimizamos las audiencias que realmente convierten.</p></div></div></a>
+      <!-- Desktop -->
+      <div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-shopping-cart fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Creación Ecommerce (Shopify)</h3>
+              <p class="text-sm">Lanzamos tu tienda online optimizada para convertir y crecer desde el día uno.</p>
             </div>
-            <!-- Versión para Mobile (Carrusel) -->
-            <div class="md:hidden overflow-x-auto flex gap-4 pb-4">
-                 <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4"><div class="flex items-center gap-4"><div><i class="fas fa-shopping-cart fa-2x"></i></div><div><h3 class="font-semibold text-lg">Creación Ecommerce (Shopify)</h3><p class="text-sm">Lanzamos tu tienda online optimizada.</p></div></div></a>
-                 <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4"><div class="flex items-center gap-4"><div><i class="fas fa-bullhorn fa-2x"></i></div><div><h3 class="font-semibold text-lg">Paid Media (Anuncios)</h3><p class="text-sm">Gestionamos tus anuncios para un ROI real.</p></div></div></a>
-                 <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4"><div class="flex items-center gap-4"><div><i class="fas fa-search-dollar fa-2x"></i></div><div><h3 class="font-semibold text-lg">Posicionamiento IA / SEO</h3><p class="text-sm">Hacemos que tus clientes te encuentren.</p></div></div></a>
-                 <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4"><div class="flex items-center gap-4"><div><i class="fas fa-camera-retro fa-2x"></i></div><div><h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3><p class="text-sm">Producción visual estratégica para tu catálogo.</p></div></div></a>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-bullhorn fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Paid Media (Anuncios)</h3>
+              <p class="text-sm">Gestionamos tus anuncios en Meta, TikTok y Google para obtener un ROI real.</p>
             </div>
-        </section>
-        
-        <section class="py-24 scroll-reveal">
-             <h2 class="headline text-4xl mb-4">Nuestro Proceso Colaborativo</h2><p class="text-lg max-w-3xl mb-16">Un método ágil y transparente que garantiza la alineación con tus objetivos y la entrega de resultados excepcionales.</p>
-             <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-left">
-                <div class="process-step group"><div class="process-number">1</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Inmersión</h3><p class="text-sm mt-2">Entendemos tu negocio, mercado y objetivos a fondo.</p></div>
-                <div class="process-step group"><div class="process-number">2</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Estrategia</h3><p class="text-sm mt-2">Diseñamos un plan de acción data-driven y a medida.</p></div>
-                <div class="process-step group"><div class="process-number">3</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Ejecución</h3><p class="text-sm mt-2">Creamos, desarrollamos y lanzamos las iniciativas.</p></div>
-                <div class="process-step group"><div class="process-number">4</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Análisis</h3><p class="text-sm mt-2">Medimos el rendimiento y recopilamos insights clave.</p></div>
-                <div class="process-step group"><div class="process-number">5</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Optimización</h3><p class="text-sm mt-2">Iteramos y mejoramos continuamente para maximizar el ROI.</p></div>
-             </div>
-        </section>
-        
-        <section class="border border-linea-clara rounded-lg p-12 text-left my-20 scroll-reveal">
-             <h2 class="headline text-4xl mb-4">¿Listo para llevar tu marca al siguiente nivel?</h2>
-            <p class="text-xl max-w-2xl mb-10">Hablemos sobre tus objetivos. Contáctanos para una consultoría gratuita y descubre cómo la precisión de PIXEL puede impulsar tu crecimiento.</p>
-            <a href="contacto.html" class="btn text-xl">Empezar mi Proyecto</a>
-        </section>
-    </main>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-search-dollar fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Posicionamiento IA / SEO</h3>
+              <p class="text-sm">Hacemos que tus clientes te encuentren en Google antes que a tu competencia.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-camera-retro fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3>
+              <p class="text-sm">Producción visual estratégica para que tu catálogo enamore y venda más.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-drafting-compass fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Diseño (UX/UI) Optimization</h3>
+              <p class="text-sm">Auditamos y rediseñamos tu web para maximizar las conversiones.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-cogs fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Estrategia 360° Ecommerce</h3>
+              <p class="text-sm">Gestión integral para un crecimiento sostenible y escalable.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-envelope-open-text fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Email Marketing</h3>
+              <p class="text-sm">Automatizamos campañas para vender más y fidelizar a tus clientes.</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-users-cog fa-2x"></i></div>
+            <div>
+              <h3 class="font-semibold text-lg">Segmentación & Audiencias</h3>
+              <p class="text-sm">Identificamos y optimizamos las audiencias que realmente convierten.</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
-    <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] flex flex-wrap justify-between items-center text-sm gap-4">
-        <div><a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a><p class="mt-2">&copy; 2024 Pixel. Todos los derechos reservados.</p></div>
-        <div class="text-right"><div class="flex justify-end space-x-6 mb-2"><a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a></div><a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a></div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="main.js"></script>
+      <!-- Mobile -->
+      <div class="md:hidden overflow-x-auto flex gap-4 pb-4">
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-shopping-cart fa-2x"></i></div>
+            <div><h3 class="font-semibold text-lg">Creación Ecommerce (Shopify)</h3><p class="text-sm">Lanzamos tu tienda online optimizada.</p></div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-bullhorn fa-2x"></i></div>
+            <div><h3 class="font-semibold text-lg">Paid Media (Anuncios)</h3><p class="text-sm">Gestionamos tus anuncios para un ROI real.</p></div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-search-dollar fa-2x"></i></div>
+            <div><h3 class="font-semibold text-lg">Posicionamiento IA / SEO</h3><p class="text-sm">Hacemos que tus clientes te encuentren.</p></div>
+          </div>
+        </a>
+        <a href="https://cotizacion-umber.vercel.app/" target="_blank" class="service-card flex-shrink-0 w-3/4">
+          <div class="flex items-center gap-4">
+            <div><i class="fas fa-camera-retro fa-2x"></i></div>
+            <div><h3 class="font-semibold text-lg">Photo Shooting E-commerce</h3><p class="text-sm">Producción visual estratégica para tu catálogo.</p></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="py-24 scroll-reveal">
+      <h2 class="headline text-4xl mb-4">Nuestro Proceso Colaborativo</h2>
+      <p class="text-lg max-w-3xl mb-16">Un método ágil y transparente que garantiza la alineación con tus objetivos y la entrega de resultados excepcionales.</p>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-left">
+        <div class="process-step group"><div class="process-number">1</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Inmersión</h3><p class="text-sm mt-2">Entendemos tu negocio, mercado y objetivos a fondo.</p></div>
+        <div class="process-step group"><div class="process-number">2</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Estrategia</h3><p class="text-sm mt-2">Diseñamos un plan de acción data-driven y a medida.</p></div>
+        <div class="process-step group"><div class="process-number">3</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Ejecución</h3><p class="text-sm mt-2">Creamos, desarrollamos y lanzamos las iniciativas.</p></div>
+        <div class="process-step group"><div class="process-number">4</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Análisis</h3><p class="text-sm mt-2">Medimos el rendimiento y recopilamos insights clave.</p></div>
+        <div class="process-step group"><div class="process-number">5</div><h3 class="font-bold text-lg text-[var(--rojo-acento)]">Optimización</h3><p class="text-sm mt-2">Iteramos y mejoramos continuamente para maximizar el ROI.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border border-linea-clara rounded-lg p-12 text-left my-20 scroll-reveal">
+      <h2 class="headline text-4xl mb-4">¿Listo para llevar tu marca al siguiente nivel?</h2>
+      <p class="text-xl max-w-2xl mb-10">Hablemos sobre tus objetivos. Contáctanos para una consultoría gratuita y descubre cómo la precisión de PIXEL puede impulsar tu crecimiento.</p>
+      <a href="contacto.html" class="btn text-xl">Empezar mi Proyecto</a>
+    </section>
+  </main>
+
+  <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] flex flex-wrap justify-between items-center text-sm gap-4">
+    <div>
+      <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
+      <p class="mt-2">&copy; 2024 Pixel. Todos los derechos reservados.</p>
+    </div>
+    <div class="text-right">
+      <div class="flex justify-end space-x-6 mb-2">
+        <a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Librerías + JS del sitio -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,132 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Proyectos • PIXEL</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyectos • PIXEL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="cursor-dot"></div><div class="cursor-outline"></div>
-    <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8">
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--gris-oscuro)]">
-                <a href="proyectos.html" class="nav-link transition-colors active">Proyectos</a>
-                <a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">Posicionamiento en IA</a>
-                <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color: #C6341E;">¿Qué hacemos?</a>
-                <a href="contacto.html" class="nav-link transition-colors">Contacto</a>
-            </nav>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--gris-oscuro)]"><i class="fas fa-bars"></i></button>
+  <div class="cursor-dot"></div><div class="cursor-outline"></div>
+  <header class="sticky top-0 left-0 right-0 z-40 bg-fondo-crema/80 backdrop-blur-sm border-b border-[var(--linea-clara)]">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--gris-oscuro)]">
+        <a href="proyectos.html" class="nav-link transition-colors active">Proyectos</a>
+        <a href="https://posicionamiento-ia.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color:#C6341E;">Posicionamiento en IA</a>
+        <a href="https://cotizacion-xi.vercel.app/" target="_blank" class="nav-link transition-colors font-bold" style="color:#C6341E;">¿Qué hacemos?</a>
+        <a href="contacto.html" class="nav-link transition-colors">Contacto</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--gris-oscuro)]"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-fondo-crema/95 border-t border-[var(--linea-clara)]">
+      <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Inicio</a>
+      <a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Proyectos</a>
+      <a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pt-20 pb-20">
+    <h1 class="headline text-center text-5xl md:text-6xl mb-16 scroll-reveal">Casos de Éxito</h1>
+    <div class="space-y-24">
+      <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
+        <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block group">
+          <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?q=80&w=1974&auto=format&fit=crop" class="rounded-lg w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" alt="Fiji Swim">
+        </a>
+        <div>
+          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Fiji Swim</div>
+          <h2 class="headline text-4xl mt-4">Lanzamiento <span class="text-highlight">Explosivo</span></h2>
+          <p class="text-lg mt-4">Desarrollamos su e-commerce en Shopify y ejecutamos una estrategia de Paid Media en Meta e Instagram, resultando en un +150% de ventas sobre el objetivo en su temporada de lanzamiento.</p>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-fondo-crema/95 border-t border-[var(--linea-clara)]">
-            <a href="index.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link">Inicio</a>
-            <a href="proyectos.html" class="block text-center py-3 border-b border-[var(--linea-clara)] nav-link active">Proyectos</a>
-            <a href="contacto.html" class="block text-center py-3 nav-link">Contacto</a>
+      </section>
+
+      <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
+        <div class="md:order-2">
+          <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block group">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" class="rounded-lg w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" alt="Lab Nutrition">
+          </a>
         </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 pt-20 pb-20">
-        <h1 class="headline text-center text-5xl md:text-7xl mb-24 scroll-reveal">Proyectos Pixel</h1>
-        <div class="space-y-24">
-
-            <!-- Proyecto 1: Fiji Swim -->
-            <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-                <div class="space-y-4">
-                    <!-- REEMPLAZA ESTE DIV CON TU LOGO: <img src="logos/fiji-swim.svg" class="h-10"> -->
-                    <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Fiji Swim</div>
-                    <h2 class="headline text-4xl">Lanzamiento <span class="text-highlight">Explosivo</span></h2>
-                    <p class="text-lg text-[var(--gris-oscuro)]">Para el lanzamiento de Fiji Swim, creamos una estrategia 360° que combinó un e-commerce en Shopify altamente optimizado, una campaña de Paid Media viral en TikTok e Instagram, y una sesión de fotos que capturó la esencia de la marca. El resultado fue un sold-out de la primera colección en 3 semanas.</p>
-                    <div class="flex flex-wrap gap-2 pt-4">
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">E-commerce</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Paid Media</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Fotografía</span>
-                    </div>
-                </div>
-                <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block rounded-lg overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?q=80&w=1974&auto=format&fit=crop" alt="Proyecto Fiji Swim" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </a>
-            </section>
-
-            <!-- Proyecto 2: Lab Nutrition -->
-            <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-                <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block rounded-lg overflow-hidden group md:order-2">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Proyecto Lab Nutrition" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </a>
-                <div class="space-y-4 md:order-1 text-left md:text-right">
-                    <!-- REEMPLAZA ESTE DIV CON TU LOGO: <img src="logos/lab-nutrition.svg" class="h-12 ml-auto"> -->
-                    <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Lab Nutrition</div>
-                    <h2 class="headline text-4xl">Optimización y <span class="text-highlight">Escalabilidad</span></h2>
-                    <p class="text-lg text-[var(--gris-oscuro)]">Auditamos y rediseñamos la estrategia de performance de Lab Nutrition. Mediante la implementación de un sistema de análisis predictivo con IA y la optimización del CRM, aumentamos la tasa de recompra en un 40% y el LTV en un 25% en solo 6 meses.</p>
-                    <div class="flex flex-wrap gap-2 pt-4 justify-start md:justify-end">
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">IA & Analítica</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Marketing CRM</span>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Proyecto 3: Virago Dress -->
-            <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-                <div class="space-y-4">
-                    <!-- REEMPLAZA ESTE DIV CON TU LOGO: <img src="logos/virago-dress.svg" class="h-10"> -->
-                    <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Virago Dress</div>
-                    <h2 class="headline text-4xl">Posicionamiento <span class="text-highlight">de Nicho</span></h2>
-                    <p class="text-lg text-[var(--gris-oscuro)]">Desarrollamos una estrategia de Posicionamiento IA (AEO) para capturar el mercado de moda formal. Optimizamos su contenido para ser la respuesta de autoridad en búsquedas clave, resultando en un aumento del 300% en tráfico orgánico cualificado.</p>
-                    <div class="flex flex-wrap gap-2 pt-4">
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Posicionamiento IA/SEO</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Contenido Estratégico</span>
-                    </div>
-                </div>
-                <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block rounded-lg overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1598554747476-64ad4c24f6d5?q=80&w=2070&auto=format&fit=crop" alt="Proyecto Virago Dress" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </a>
-            </section>
-
-            <!-- Proyecto 4: Teen Life -->
-            <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-                <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block rounded-lg overflow-hidden group md:order-2">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Proyecto Teen Life" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </a>
-                <div class="space-y-4 md:order-1 text-left md:text-right">
-                    <!-- REEMPLAZA ESTE DIV CON TU LOGO: <img src="logos/teen-life.svg" class="h-12 ml-auto"> -->
-                    <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Teen Life</div>
-                    <h2 class="headline text-4xl">Conexión con la <span class="text-highlight">Gen Z</span></h2>
-                    <p class="text-lg text-[var(--gris-oscuro)]">Creamos una campaña de TikTok Ads y contenido orgánico que resonó con la audiencia Gen Z. Logramos triplicar su comunidad y aumentar el engagement en un 500%, convirtiendo a la marca en un referente del sector juvenil.</p>
-                    <div class="flex flex-wrap gap-2 pt-4 justify-start md:justify-end">
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Paid Media (TikTok)</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Social Media</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Proyecto 5: Sweet Silvia -->
-            <section class="grid md:grid-cols-2 gap-12 items-center scroll-reveal">
-                <div class="space-y-4">
-                    <!-- REEMPLAZA ESTE DIV CON TU LOGO: <img src="logos/sweet-silvia.svg" class="h-10"> -->
-                    <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Sweet Silvia</div>
-                    <h2 class="headline text-4xl">Branding y <span class="text-highlight">Lanzamiento</span></h2>
-                    <p class="text-lg text-[var(--gris-oscuro)]">Construimos la identidad de marca desde cero, desde el logo hasta el tono de voz. Diseñamos su web y lanzamos una campaña de awareness en redes que la posicionó exitosamente en el competitivo sector de postres artesanales.</p>
-                    <div class="flex flex-wrap gap-2 pt-4">
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Branding y Creatividad</span>
-                        <span class="text-xs font-semibold border border-linea-clara px-3 py-1 rounded-full">Diseño Web</span>
-                    </div>
-                </div>
-                <a href="https://www.behance.net/israelsarmiento3" target="_blank" class="block rounded-lg overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop" alt="Proyecto Sweet Silvia" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </a>
-            </section>
-
+        <div class="md:order-1 text-right">
+          <div class="font-bold text-4xl text-[var(--gris-oscuro)]">Lab Nutrition</div>
+          <h2 class="headline text-4xl mt-4">Optimización y <span class="text-highlight">Escalabilidad</span></h2>
+          <p class="text-lg mt-4">Auditamos y rediseñamos la estrategia de performance. Mediante la implementación de un sistema de análisis predictivo con IA y la optimización del CRM, aumentamos la tasa de recompra en un 40%.</p>
         </div>
-    </main>
-    <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] flex flex-wrap justify-between items-center text-sm text-[var(--gris-oscuro)] gap-4">
-        <div><a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a><p class="mt-2">&copy; 2024 Pixel. Todos los derechos reservados.</p></div>
-        <div class="text-right"><div class="flex justify-end space-x-6 mb-2"><a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a></div><a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a></div>
-    </footer>
-    <script src="main.js"></script>
+      </section>
+    </div>
+  </main>
+
+  <footer class="max-w-7xl mx-auto px-4 py-8 mt-10 border-t border-[var(--linea-clara)] flex flex-wrap justify-between items-center text-sm gap-4">
+    <div><a href="index.html"><img src="https://via.placeholder.com/120x32/C6341E/F5F1E8?text=PIXEL" alt="Logo Pixel" class="h-8"></a><p class="mt-2">&copy; 2024 Pixel. Todos los derechos reservados.</p></div>
+    <div class="text-right"><div class="flex justify-end space-x-6 mb-2"><a href="https://www.instagram.com/pixel.public/" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/company/pixelperu" target="_blank" class="text-2xl text-[var(--gris-oscuro)] hover:text-[var(--rojo-acento)] transition-colors"><i class="fab fa-linkedin"></i></a></div><a href="politica-privacidad.html" class="hover:text-[var(--rojo-acento)] transition-colors">Política de Privacidad</a></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
